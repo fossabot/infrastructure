@@ -32,5 +32,5 @@ In most cases, you will need to specify `google_credentials` in `terraform.tfvar
 Ex:
 
 ```
-google_credentials = "vpn-service-264313-d2bfe9ce60e2.json"
+google_credentials = "serviceaccount-creds.json"
 ```
