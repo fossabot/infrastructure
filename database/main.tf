@@ -175,6 +175,6 @@ resource "google_secret_manager_secret" "mysql_database" {
 
 resource "google_secret_manager_secret_version" "mysql_database" {
   provider    = google-beta
-  secret      = google_secret_manager_secret.connection_name.name
+  secret      = google_secret_manager_secret.mysql_database.name
   secret_data = var.mysql_database
 }
