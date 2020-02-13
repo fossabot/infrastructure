@@ -31,7 +31,7 @@ resource "google_bigquery_dataset" "iap" {
 }
 
 resource "google_bigquery_table" "iap-apple-table" {
-  dataset_id = google_bigquery_dataset.iap-apple.dataset_id
+  dataset_id = google_bigquery_dataset.iap.dataset_id
   table_id   = "apple"
 
   time_partitioning {
