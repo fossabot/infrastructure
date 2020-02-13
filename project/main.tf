@@ -67,7 +67,8 @@ variable "google_project_service_services" {
     "cloudfunctions.googleapis.com",
     "storage-component.googleapis.com",
     "appengine.googleapis.com",
-    "secretmanager.googleapis.com"
+    "secretmanager.googleapis.com",
+    "dataflow.googleapis.com"
   ]
 }
 
