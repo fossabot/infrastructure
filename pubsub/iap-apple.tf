@@ -50,6 +50,6 @@ resource "google_dataflow_job" "iap-bigquery" {
   temp_gcs_location = "gs://${var.project_id}-tmp/iap-bigquery"
   parameters = {
     inputTopic      = google_pubsub_topic.iap-apple-topic.id
-    outputTableSpec = google_bigquery_table.iap-apple-table.self_link
+    outputTableSpec = "${var.project_id}:${google_bigquery_dataset.iap.dataset_id}.${google_bigquery_table.iap-apple-table.table_id}"
   }
 }
