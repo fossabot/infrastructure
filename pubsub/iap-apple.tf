@@ -7,19 +7,17 @@ resource "google_pubsub_topic" "iap-apple-topic" {
 }
 
 resource "google_pubsub_subscription" "iap-apple-sub" {
-  name                       = "iap-apple-sub"
-  topic                      = google_pubsub_topic.iap-apple-topic.name
-  message_retention_duration = "168h"
-  retain_acked_messages      = true
-  ack_deadline_seconds       = 60
+  name                  = "iap-apple-sub"
+  topic                 = google_pubsub_topic.iap-apple-topic.name
+  retain_acked_messages = true
+  ack_deadline_seconds  = 60
 }
 
 resource "google_pubsub_subscription" "iap-apple-dataflow-sub" {
-  name                       = "iap-apple-dataflow-sub"
-  topic                      = google_pubsub_topic.iap-apple-topic.name
-  message_retention_duration = "10m"
-  retain_acked_messages      = false
-  ack_deadline_seconds       = 20
+  name                  = "iap-apple-dataflow-sub"
+  topic                 = google_pubsub_topic.iap-apple-topic.name
+  retain_acked_messages = false
+  ack_deadline_seconds  = 20
 }
 
 resource "google_bigquery_dataset" "iap" {
