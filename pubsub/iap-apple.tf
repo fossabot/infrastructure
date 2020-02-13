@@ -45,7 +45,7 @@ resource "google_storage_bucket" "image-store" {
 resource "google_dataflow_job" "iap-bigquery" {
   name              = "iap-bigquery"
   region            = "us-central1"
-  zone              = "us-central1"
+  zone              = "us-central1-a"
   template_gcs_path = "gs://dataflow-templates/2019-07-10-00/PubSub_to_BigQuery"
   temp_gcs_location = "gs://${var.project_id}-tmp/iap-bigquery"
   parameters = {
