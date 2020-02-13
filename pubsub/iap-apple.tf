@@ -49,7 +49,7 @@ resource "google_dataflow_job" "iap-bigquery" {
   template_gcs_path = "gs://dataflow-templates/2019-07-10-00/PubSub_to_BigQuery"
   temp_gcs_location = "gs://${var.project_id}-tmp/iap-bigquery"
   parameters = {
-    inputTopic      = google_pubsub_topic.iap-apple-topic.name,
+    inputTopic      = google_pubsub_topic.iap-apple-topic.name
     outputTableSpec = google_bigquery_table.iap-apple-table.table_id
   }
 }
