@@ -23,8 +23,8 @@ resource "google_pubsub_subscription" "iap-apple-dataflow-sub" {
 }
 
 resource "google_bigquery_dataset" "iap-apple" {
-  dataset_id    = "iap-apple"
-  friendly_name = "iap-apple"
+  dataset_id    = "iap"
+  friendly_name = "iap apple"
   description   = "In App Puchase Webhook Data from Apple"
   # location                    = "EU"
   default_table_expiration_ms = 3600000
