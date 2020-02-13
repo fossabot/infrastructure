@@ -16,7 +16,7 @@ resource "google_pubsub_subscription" "iap-apple-sub" {
 resource "google_pubsub_subscription" "iap-apple-dataflow-sub" {
   name                  = "iap-apple-dataflow-sub"
   topic                 = google_pubsub_topic.iap-apple-topic.name
-  retain_acked_messages = false
+  retain_acked_messages = true
   ack_deadline_seconds  = 20
 }
 
