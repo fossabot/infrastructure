@@ -1,4 +1,6 @@
 # Terraform
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsecurenomad%2Finfrastructure.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsecurenomad%2Finfrastructure?ref=badge_shield)
+
 
 Terraform manages making a database, permissions, projects, buckets, networking, and kubernetes nodes. This does not manage kubernetes other than running a few scripts to set things up.
 
@@ -34,3 +36,7 @@ Ex:
 ```
 google_credentials = "serviceaccount-creds.json"
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsecurenomad%2Finfrastructure.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsecurenomad%2Finfrastructure?ref=badge_large)
